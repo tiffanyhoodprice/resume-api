@@ -8,10 +8,10 @@ class EducationsController < ApplicationController
     @educations = Education.new( start_date: params[:start_date],
       end_date: params[:end_date], 
       degree: params[:degree],
-      phone: params[:phone],degree
+      phone: params[:phone],
       university_name: params[:university_name],
       details: params[:details],
-      student_id: params[:student_id]
+      student_id: params[:student_id])
       if @educations.save
         redirect_to "/students/#{@student.id}"
       else
