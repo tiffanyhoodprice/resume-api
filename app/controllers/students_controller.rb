@@ -23,7 +23,7 @@ class StudentsController < ApplicationController
     if @student.save
       redirect_to "/students/#{@student.id}"
     else
-      render json: ""
+      render json: @student.errors.full_messages
     end
   end
 
