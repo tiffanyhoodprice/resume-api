@@ -1,7 +1,7 @@
 User.create!([
-  {email: "tiffany.j.price@gmail.com", encrypted_password: "$2a$10$PcquOdfhlaqGMAOX3rw7L.Vzy10bLDFP/RCyLh/vXJWPXY4KGHg8q", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2015-12-20 19:00:17", last_sign_in_at: "2015-12-20 19:00:17", current_sign_in_ip: "::1", last_sign_in_ip: "::1"},
-  {email: "nick@acltc.com", encrypted_password: "$2a$10$CB5tbKu1xAb/Uw.BULxKYu61kNflLkoAsGS6xNmst5dJuTAhSmw8S", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2015-12-20 19:09:16", last_sign_in_at: "2015-12-20 19:09:16", current_sign_in_ip: "::1", last_sign_in_ip: "::1"},
-  {email: "matt@acltc.com", encrypted_password: "$2a$10$ZvVWLcBKzgiZmfbCWeOHLenJnWAHS0pqnia/Ida6UcQ7MCivlAS56", reset_password_token: nil, reset_password_sent_at: nil, remember_created_at: nil, sign_in_count: 1, current_sign_in_at: "2015-12-20 19:09:45", last_sign_in_at: "2015-12-20 19:09:45", current_sign_in_ip: "::1", last_sign_in_ip: "::1"}
+  {email: "tiffany.j.price@gmail.com", password: "password"},
+  {email: "nick@acltc.com", password: "password"},
+  {email: "matt@acltc.com", password: "password"}
 ])
 Education.create!([
   {start_date: "1989-05-01", end_date: "1993-06-01", degree: "BA", university_name: "Emory University", details: "Chemistry, International Studies", student_id: 1},
