@@ -30,10 +30,11 @@ class ExperiencesController < ApplicationController
       student_id: params[:student_id])
     if @experience.save
     redirect_to "/students/#{@student.id}"
-  else
+    else
     render json: @student.errors.full_messages
+    end
   end
-​
+
   def destroy
     @experience = Experience.find(params[:id])
     @experience.destroy
