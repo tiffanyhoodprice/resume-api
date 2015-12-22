@@ -5,15 +5,15 @@ class ExperiencesController < ApplicationController
   end
 
    def create
-    @experiences = Experience.new( start_date: params[:start_date],
+    @experience = Experience.new( start_date: params[:start_date],
       end_date: params[:end_date], 
       job_title: params[:job_title],
       company_name: params[:company_name],
       student_id: params[:student_id])
-      if @experiences.save
-        redirect_to "/students/#{@student.id}"
+      if @experience.save
+        redirect_to "/experiences/#{@experience.id}"
       else
-        render json: @student.errors.full_messages
+        render json: @experience.errors.full_messages
       end
   end
 
@@ -29,16 +29,16 @@ class ExperiencesController < ApplicationController
       company_name: params[:company_name],
       student_id: params[:student_id])
     if @experience.save
-    redirect_to "/students/#{@student.id}"
+    redirect_to "/experiences/#{@experience.id}"
     else
-    render json: @student.errors.full_messages
+    render json: @experience.errors.full_messages
     end
   end
 
   def destroy
     @experience = Experience.find(params[:id])
     @experience.destroy
-    redirect_to "/students"
+    redirect_to "/experiences"
   end
 
 end
