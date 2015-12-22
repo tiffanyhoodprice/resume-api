@@ -27,7 +27,7 @@ class EducationsController < ApplicationController
       phone: params[:phone],
       university_name: params[:university_name],
       details: params[:details],
-      student_id: params[:student_id)
+      student_id: params[:student_id])
     if @education.save
       redirect_to "/students/#{@student.id}"
     else
