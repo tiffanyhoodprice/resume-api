@@ -13,7 +13,7 @@ class EducationsController < ApplicationController
       details: params[:details],
       student_id: params[:student_id])
     if @education.save
-      redirect_to "/students/#{@student.id}"
+      redirect_to "/educations/#{@education.id}"
     else
       render json: @education.errors.full_messages
     end
@@ -29,7 +29,7 @@ class EducationsController < ApplicationController
       details: params[:details],
       student_id: params[:student_id])
     if @education.save
-      redirect_to "/students/#{@student.id}"
+      redirect_to "/educations/#{@education.id}"
     else
       render json: @education.errors.full_messages
     end
@@ -42,7 +42,7 @@ class EducationsController < ApplicationController
   def destroy
     @education = Education.find(params[:id])
     @education.destroy
-    redirect_to "/students"
+    redirect_to "/experiences"
   end
 
 end
